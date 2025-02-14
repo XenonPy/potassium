@@ -17,7 +17,7 @@ Then hop into the new directory:
 
 Build it with `g++` (or your C++ compiler of choice):
 
-`g++ build potassium.cpp -o potassium`
+`g++ -o potassium potassium.cpp`
 
 Then add the following command to your shell profile to add Potassium to `$PATH` (varies by system):
 
