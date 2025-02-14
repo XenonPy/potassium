@@ -1,0 +1,8 @@
+// Hello World Example
+v mynumber = 8
+pln("Welcome to Potassium. Here's a newline, followed by a number: \n")
+pln(mynumber)
+pln("Here's an expression, 4+3: ")
+pln(4 + 3)
+pln("Floats are supported. Let's do 5.5+7")
+pln(5.5 + 7)
