@@ -5,6 +5,7 @@
 #include <unordered_map>
 #include <sstream>
 #include <vector>
+#include <iomanip>
 
 std::unordered_map<std::string, std::string> variables;
 
@@ -89,7 +90,14 @@ std::string evaluateExpression(const std::string &expr) {
         for (const auto &token : tokens) {
             numericSum += std::stod(token);
         }
-        return std::to_string(numericSum);
+        std::ostringstream oss;
+        oss << std::fixed << std::setprecision(10) << numericSum;
+        std::string result = oss.str();
+        result.erase(result.find_last_not_of('0') + 1, std::string::npos); // Remove trailing zeros
+        if (result.back() == '.') {
+            result.pop_back(); // Remove trailing decimal point if present
+        }
+        return result;
     } else {
         for (const auto &token : tokens) {
             stringResult += token;
