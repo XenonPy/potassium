@@ -21,11 +21,11 @@ Build it with `g++` (or your C++ compiler of choice):
 
 Then add the following command to your shell profile to add Potassium to `$PATH` (varies by system):
 
-`export PATH=/potassium/potassium:$PATH`
+`export PATH=$(pwd):$PATH`
 
 To test your installation:
 
-`touch hello_World.kscript`
+`touch hello_world.kscript`
 
 Add `pln("Hello, World!")` to your Potassium script.
 Run it:
